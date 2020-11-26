@@ -1,0 +1,188 @@
+html, body {
+    height: 100%;
+}
+
+body, .input-group {
+    display: flex;
+}
+
+body {
+    place-content: center;
+    place-items: center;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+    background-color: #fff;
+    box-shadow: 0 4px 10px #a5d8ff;
+    border-radius: 15px;
+    width: 260px;
+    height: 417px;
+}
+
+section, input[type="text"] {
+    overflow: hidden;
+}
+
+input[type="checkbox"]:checked ~ label:before, h1 {
+    background-color: #339af0;
+}
+
+h1, h4, button {
+    color: #fff;
+}
+
+h1, h4 {
+    font-weight: 400;
+    text-align: center;
+    margin: 0 0;
+}
+
+h1 {
+    padding: 15px 15px;
+}
+
+h4 {
+    background-color: #68bde1;
+    padding: 10px 10px;
+}
+
+button, label:before, input[type="text"] {
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ label:after {
+    transform: rotate(-45deg) scale(1);
+}
+
+label {
+    position: relative;
+}
+
+label, button {
+    cursor: pointer;
+}
+
+label:before, label:after {
+    content: "";
+    position: absolute;
+}
+
+label:before {
+    top: 0;
+    left: 0;
+    width: 29px;
+    height: 29px;
+    border: 1px solid #339af0;
+}
+
+label:after, input[type="text"], button:not(.disabled) {
+    transition: 0.3s;
+}
+
+label:after {
+    top: 8px;
+    left: 4px;
+    width: 18px;
+    height: 8px;
+    border-left: 5px solid #fff;
+    border-bottom: 3px solid #fff;
+    transform: rotate(-45deg) scale(0);
+}
+
+input[type="text"] {
+    border: 1px solid #f0f0f0;
+    padding: 5px;
+    color: #5d5d5d;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+input[type="text"]::placeholder {
+    color: #afafaf;
+}
+
+input[type="text"]:focus {
+    border: 1px solid #44c662;
+}
+
+button, input[type="text"] {
+    outline: none;
+}
+
+button, input[type="text"].completed {
+    border: none;
+}
+
+button {
+    width: 15%;
+    padding: 8px;
+    font-weight: 700;
+}
+
+.add-task, .my-tasks {
+    padding: 15px;
+}
+
+.my-tasks {
+    overflow-x: auto;
+    height: 201px;
+}
+
+.input-group {
+    place-content: space-between;
+    flex-wrap: wrap;
+    margin: 5px 0 5px 0;
+}
+
+.add-task .input-group input {
+    width: 77%;
+}
+
+.my-tasks .input-group input {
+    width: 60%;
+    margin-left: 31px;
+}
+
+input[type="text"].completed {
+    text-decoration: line-through;
+}
+
+input[type="text"].wrong {
+    border: 1px solid #f76978;
+}
+
+.add {
+    background-color: #44c662;
+}
+
+.add:hover:not(.disabled) {
+    background-color: #008000;
+}
+
+.remove {
+    background-color: #f76978;
+}
+
+.remove:hover:not(.disabled) {
+    background-color: #ff0000;
+}
+
+.reset-height {
+    height: initial;
+}
+
+.reset-place-items {
+    place-items: initial;
+}
+
+.disabled {
+    cursor: not-allowed;
+    opacity: .2;
+}
